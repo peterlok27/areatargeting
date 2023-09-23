@@ -1,0 +1,11 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "main.cpp"
+    ],
+    "directory": "/home/peterlok/Projects/areatargeting",
+    "file": "/home/peterlok/Projects/areatargeting/main.cpp"
+  }
+]
