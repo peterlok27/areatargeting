@@ -107,6 +107,12 @@ public:
         };
     };
 
+    void shiftCompositeCurve(float H){
+        for (auto& pt : this->points){
+            pt.enthaply += H;
+        };
+    }
+
     // Print all points on CC
     void debug(){
         for(Point p:this->points){
@@ -122,6 +128,8 @@ public:
         cout << "Number of Streams: " << this->streams.size();
     };
 };
+
+// Create new class to combine both composite curves
 
 class ProblemTable {
 public:
@@ -251,6 +259,7 @@ int main() {
     cout << pt.coldUtility << endl;
     compositeCurve hotCC(streams,0);
     compositeCurve coldCC(streams,1);
+    coldCC.shiftCompositeCurve(pt.coldUtility);
     return 0;
 };
 
